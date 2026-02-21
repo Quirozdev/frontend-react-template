@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --color-background: #ffffff;
+}
+
+[data-theme="dark"] {
+  --color-background: oklch(27.8% 0.033 256.848);
+}
