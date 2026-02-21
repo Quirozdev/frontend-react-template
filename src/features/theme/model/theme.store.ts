@@ -1,7 +1,10 @@
 import { create } from "zustand";
-import { type Theme, type ThemeState } from "./theme.types";
-import { applyTheme, getInitialTheme } from "../lib/theme.helpers";
 import { subscribeWithSelector } from "zustand/middleware";
+import type { Theme, ThemeState } from "@/features/theme/model/theme.types";
+import {
+  applyTheme,
+  getInitialTheme,
+} from "@/features/theme/lib/theme.helpers";
 
 export const useThemeStore = create(
   subscribeWithSelector<ThemeState>((set) => ({

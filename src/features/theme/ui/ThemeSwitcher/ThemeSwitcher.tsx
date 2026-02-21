@@ -1,18 +1,20 @@
-import { useThemeStore } from "../../model/theme.store";
-import { type Theme } from "../../model/theme.types";
+import { useThemeStore } from "@/features/theme/model/theme.store";
+import type { Theme } from "@/features/theme/model/theme.types";
+import { useTranslation } from "react-i18next";
 
 export default function ThemeSwitcher() {
   const theme = useThemeStore((state) => state.theme);
   const changeTheme = useThemeStore((state) => state.changeTheme);
+  const { t } = useTranslation(["theme"]);
 
   const availableOptions = [
     {
-      label: "Light",
+      label: t("light"),
       value: "light",
       icon: "☀️",
     },
     {
-      label: "Dark",
+      label: t("dark"),
       value: "dark",
       icon: "🌙",
     },

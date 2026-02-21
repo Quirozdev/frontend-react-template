@@ -1,13 +1,17 @@
-import ThemeSwitcher from "./features/theme/ui/ThemeSwitcher/ThemeSwitcher";
+import ThemeSwitcher from "@/features/theme/ui/ThemeSwitcher/ThemeSwitcher";
+import { Suspense } from "react";
+import { useTranslation } from "react-i18next";
 
 function App() {
+  const { t } = useTranslation(["common"]);
+
   return (
-    <>
+    <Suspense>
       <div className="bg-background">
-        <p>Test</p>
+        <p>{t("hello")}</p>
         <ThemeSwitcher />
       </div>
-    </>
+    </Suspense>
   );
 }
 

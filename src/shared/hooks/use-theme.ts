@@ -1,5 +1,5 @@
+import { getItemOrDefault, setItem } from "@/shared/lib/local-storage";
 import { useEffect, useState } from "react";
-import { getItemOrDefault, setItem } from "../lib/local-storage";
 
 export type SupportedThemes = "light" | "dark";
 
