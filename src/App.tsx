@@ -13,7 +13,7 @@ function App() {
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="border p-1 ml-2 bg-amber-50"
+          className="ml-2 border bg-amber-50 p-1"
         >
           animated
         </motion.button>

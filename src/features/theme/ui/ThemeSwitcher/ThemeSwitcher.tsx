@@ -36,7 +36,7 @@ export default function ThemeSwitcher() {
           ].value,
         );
       }}
-      className="border rounded-md p-1"
+      className="rounded-md border p-1"
     >
       {selectedAvailableOption.icon} {selectedAvailableOption.label}
     </button>
@@ -48,7 +48,7 @@ export default function ThemeSwitcher() {
         const selectedTheme = e.target.value as Theme;
         changeTheme(selectedTheme);
       }}
-      className="border rounded-md"
+      className="rounded-md border"
     >
       {availableOptions.map((option) => {
         return (
