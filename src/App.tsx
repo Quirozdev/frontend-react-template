@@ -1,8 +1,11 @@
 import ThemeSwitcher from "@/features/theme/ui/ThemeSwitcher/ThemeSwitcher";
 import { Suspense } from "react";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 function App() {
+  const { t } = useTranslation(["common"]);
+
   return (
     <Suspense>
       <div className="bg-background min-h-screen">
@@ -14,6 +17,7 @@ function App() {
         >
           animated
         </motion.button>
+        <p className="font-bold">{t("hello")}</p>
       </div>
     </Suspense>
   );
