@@ -8,7 +8,7 @@ function App() {
 
   return (
     <Suspense>
-      <div className="bg-background min-h-screen">
+      <div className="min-h-screen">
         <ThemeSwitcher />
         <motion.button
           whileHover={{ scale: 1.1 }}
